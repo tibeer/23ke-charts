@@ -1,0 +1,6 @@
+global:
+  versions:
+    - version: 1.20.11
+      classification: supported
+hcloud:
+  enabled: true

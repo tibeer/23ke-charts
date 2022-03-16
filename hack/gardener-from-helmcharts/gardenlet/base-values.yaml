@@ -1,0 +1,25 @@
+global:
+  gardenlet:
+    config:
+      gardenClientConnection:
+        bootstrapKubeconfig:
+          secretRef:
+            name: gardenlet-kubeconfig-bootstrap
+            namespace: flux-system
+        kubeconfigSecret:
+          name: gardenlet-kubeconfig
+          namespace: garden
+      seedConfig:
+        spec:
+          settings:
+            excessCapacityReservation:
+              enabled: false
+      deployment:
+        virtualGarden:
+          enabled: false
+      featureGates:
+        Logging: false
+        ManagedIstio: true
+    image:
+      tag: ${GARDENER_VERSION}
+    vpa: false

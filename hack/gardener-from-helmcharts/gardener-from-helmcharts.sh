@@ -144,3 +144,13 @@ helm_upgrade gardener-controlplane-runtime 23ke-charts garden --wait
 #                          install gardener dashboard                         #
 ###############################################################################
 helm_upgrade gardener-dashboard 23ke-charts garden --wait
+
+
+# install extensions + cloudprofiles (untested)
+#helm_upgrade extensions 23ke-charts garden --wait --kubeconfig apiserver-in-shoot-kubeconfig.yaml
+#helm_upgrade cloudprofiles 23ke-charts garden --wait --kubeconfig apiserver-in-shoot-kubeconfig.yaml
+
+
+# install gardenlet (untested)
+#helm_upgrade pre-gardenlet 23ke-charts garden --wait --kubeconfig apiserver-in-shoot-kubeconfig.yaml
+#helm_upgrade gardenlet 23ke-charts garden --wait

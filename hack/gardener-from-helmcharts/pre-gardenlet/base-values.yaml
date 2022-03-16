@@ -1,0 +1,5 @@
+global:
+  token:
+    id: ${TOKEN_ID}
+    secret: ${TOKEN_SECRET}
+    ca: test
